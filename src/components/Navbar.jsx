@@ -1,0 +1,63 @@
+"use client";
+
+import Image from "next/image";
+import Link from "next/link";
+import {FolderHouse, House, Person, PersonPlus} from '@gravity-ui/icons';
+import { Button } from "@heroui/react";
+import {GraduationCap} from '@gravity-ui/icons';
+import {ArrowRightToSquare} from '@gravity-ui/icons';
+
+import React from 'react';
+
+
+
+const Navbar = () => {
+  return (
+    <div className="border-b px-2">
+      <nav className=" flex justify-between items-center py-3 max-w-7xl mx-auto w-full">
+        <div className="flex gap-2 items-center">
+          <div className="w-10 md:w-12">
+            {" "}
+            {/* Control size with a wrapper */}
+            <Image
+              src="/logo1.png"
+              alt="Company Logo"
+              width={80} // The actual width of your source file
+              height={60} // The actual height of your source file
+              sizes="(max-width: 768px) 64px, 192px" // Matches the Tailwind classes above
+              className="h-auto w-full"
+            />
+          </div>
+          <h3 className="text-[#1e2e48] text-2xl font-bold tracking-[0.015em] md:text-2xl lg:text-3xl">
+            SkillSphere
+          </h3>
+        </div>
+
+        <ul className="flex items-center gap-5 text-lg">
+          <li>
+            <Link href={"/"}> <Button variant="ghost" size="lg" className="rounded-none"><House/> Home</Button></Link>
+          </li>
+          <li>
+            <Link href={"/all-photos"}><Button variant="ghost" size="lg" className="rounded-none"><GraduationCap/> All Courses</Button></Link>
+          </li>
+          <li>
+            <Link href={"/pricing"}><Button variant="ghost" size="lg" className="rounded-none"><Person/> Profile</Button></Link>
+          </li>
+        </ul>
+
+        <div>
+            <ul className="flex items-center gap-4 text-lg">
+              <li>
+                <Link href={"/signup"}><Button variant="outline" size="lg"> <ArrowRightToSquare /> Login</Button></Link>
+              </li>
+              <li>
+                <Link href={"/signin"}><Button variant="outline" size="lg"><PersonPlus/> Register</Button></Link>
+              </li>
+            </ul>
+        </div>
+      </nav>
+    </div>
+  );
+};
+
+export default Navbar;
