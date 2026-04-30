@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Banner = () => {
+const TopCourses = () => {
     return (
         <div className="my-8">
-            This is Banner
+            This is top courses section
         </div>
     );
 };
 
-export default Banner;
+export default TopCourses;

@@ -38,20 +38,20 @@ const Navbar = () => {
             <Link href={"/"}> <Button variant="ghost" size="lg" className="rounded-none"><House/> Home</Button></Link>
           </li>
           <li>
-            <Link href={"/all-photos"}><Button variant="ghost" size="lg" className="rounded-none"><GraduationCap/> All Courses</Button></Link>
+            <Link href={"/all-courses"}><Button variant="ghost" size="lg" className="rounded-none"><GraduationCap/> All Courses</Button></Link>
           </li>
           <li>
-            <Link href={"/pricing"}><Button variant="ghost" size="lg" className="rounded-none"><Person/> Profile</Button></Link>
+            <Link href={"/profile"}><Button variant="ghost" size="lg" className="rounded-none"><Person/>My Profile</Button></Link>
           </li>
         </ul>
 
         <div>
             <ul className="flex items-center gap-4 text-lg">
               <li>
-                <Link href={"/signup"}><Button variant="outline" size="lg"> <ArrowRightToSquare /> Login</Button></Link>
+                <Link href={"/login"}><Button variant="outline" size="lg"> <ArrowRightToSquare /> Login</Button></Link>
               </li>
               <li>
-                <Link href={"/signin"}><Button variant="outline" size="lg"><PersonPlus/> Register</Button></Link>
+                <Link href={"/register"}><Button variant="outline" size="lg"><PersonPlus/> Register</Button></Link>
               </li>
             </ul>
         </div>

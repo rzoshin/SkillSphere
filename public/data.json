@@ -1,0 +1,101 @@
+[
+  {
+    "id": 1,
+    "title": "Complete Web Development Bootcamp",
+    "instructor": "John Doe",
+    "duration": "20 hours",
+    "rating": 4.8,
+    "level": "Beginner",
+    "description": "Learn full-stack web development from scratch.",
+    "image": "https://i.ibb.co.com/GQ2yHXfH/web-Development.png",
+    "category": "Development"
+  },
+  {
+    "id": 2,
+    "title": "JavaScript Mastery",
+    "instructor": "Sarah Khan",
+    "duration": "15 hours",
+    "rating": 4.7,
+    "level": "Intermediate",
+    "description": "Deep dive into modern JavaScript, ES6+, and async programming.",
+    "image": "https://i.ibb.co.com/LXnFQzZf/javascript.png",
+    "category": "Development"
+  },
+  {
+    "id": 3,
+    "title": "Python for Data Science",
+    "instructor": "Michael Lee",
+    "duration": "18 hours",
+    "rating": 4.9,
+    "level": "Beginner",
+    "description": "Learn Python, data analysis, and visualization techniques.",
+    "image": "https://i.ibb.co.com/CFQChdV/python.png",
+    "category": "Data Science"
+  },
+  {
+    "id": 4,
+    "title": "UI/UX Design Fundamentals",
+    "instructor": "Emily Carter",
+    "duration": "12 hours",
+    "rating": 4.6,
+    "level": "Beginner",
+    "description": "Understand design principles, wireframing, and prototyping.",
+    "image": "https://i.ibb.co.com/BkphTH5/ui-Ux.png",
+    "category": "Design"
+  },
+  {
+    "id": 5,
+    "title": "Machine Learning A-Z",
+    "instructor": "David Smith",
+    "duration": "25 hours",
+    "rating": 4.8,
+    "level": "Advanced",
+    "description": "Master machine learning algorithms and real-world projects.",
+    "image": "https://i.ibb.co.com/rR347mn6/machine-Learning.png",
+    "category": "Data Science"
+  },
+  {
+    "id": 6,
+    "title": "React & Next.js Complete Guide",
+    "instructor": "Alex Johnson",
+    "duration": "22 hours",
+    "rating": 4.9,
+    "level": "Intermediate",
+    "description": "Build modern web apps using React and Next.js.",
+    "image": "https://i.ibb.co.com/MXFDRt2/react-Next.png",
+    "category": "Development"
+  },
+  {
+    "id": 7,
+    "title": "Cybersecurity Basics",
+    "instructor": "Nina Patel",
+    "duration": "10 hours",
+    "rating": 4.5,
+    "level": "Beginner",
+    "description": "Learn how to protect systems, networks, and data from attacks.",
+    "image": "https://i.ibb.co.com/hFPqmMdb/security.png",
+    "category": "Security"
+  },
+  {
+    "id": 8,
+    "title": "Cloud Computing with AWS",
+    "instructor": "Robert Wilson",
+    "duration": "16 hours",
+    "rating": 4.7,
+    "level": "Intermediate",
+    "description": "Understand cloud infrastructure and deploy apps using AWS.",
+    "image": "https://i.ibb.co.com/gZsR6QcQ/cloud-Computing.png",
+    "category": "Cloud"
+  },
+  {
+  "id": 9,
+  "title": "Deep Learning with TensorFlow",
+  "instructor": "Andrew Miller",
+  "duration": "24 hours",
+  "rating": 4.9,
+  "level": "Advanced",
+  "description": "Build and train neural networks using TensorFlow and real-world datasets.",
+  "image": "https://i.ibb.co.com/k2j7Zd6p/deep-Learning.png",
+  "category": "Data Science"
+}
+]
