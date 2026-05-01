@@ -11,8 +11,6 @@ import {ArrowRightToSquare} from '@gravity-ui/icons';
 
 import React from 'react';
 
-
-
 const Navbar = () => {
   const router = useRouter();
   const userData = authClient.useSession();
@@ -20,12 +18,13 @@ const Navbar = () => {
 
   const handleSignOut = async () => {
     await authClient.signOut({
-  fetchOptions: {
-    onSuccess: () => {
-      router.push("/login"); // redirect to login page
+    fetchOptions: {
+      onSuccess: () => {
+        router.push("/login"); // redirect to login page
+      },
     },
-  },
-});
+  });
+}
   return (
     <div className="border-b px-2">
       <nav className=" flex justify-between items-center py-3 max-w-7xl mx-auto w-full">
@@ -49,7 +48,7 @@ const Navbar = () => {
 
         <ul className="flex items-center gap-5 text-lg">
           <li>
-            <Link href={"/"}> <Button variant="ghost" size="lg" className="rounded-none"><House/> Home</Button></Link>
+            <Link href={"/"}><Button variant="ghost" size="lg" className="rounded-none"><House/> Home</Button></Link>
           </li>
           <li>
             <Link href={"/all-courses"}><Button variant="ghost" size="lg" className="rounded-none"><GraduationCap/> All Courses</Button></Link>
@@ -77,7 +76,6 @@ const Navbar = () => {
                   alt="Raiyan Zannat"
                   src={user.image}
                   referrerPolicy = "no-referrer"
-
                 />
                 <Avatar.Fallback>RZ</Avatar.Fallback>
               </Avatar>
@@ -93,5 +91,5 @@ const Navbar = () => {
     </div>
   );
 };
-}
+
 export default Navbar;
