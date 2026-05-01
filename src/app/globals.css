@@ -1,26 +1,15 @@
 @import "tailwindcss";
 @import "@heroui/styles"; 
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+.swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-poppins: var(--font-poppins);
-  --font-inter: var(--font-inter);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
 }
