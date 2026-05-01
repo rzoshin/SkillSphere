@@ -17,7 +17,7 @@ const CourseCard = ({course}) => {
     const {id, title, image, category, description} = course;
     return (
         <Card className='rounded-xl'>
-            <div className='relative w-full aspect-square'>
+            <div className='relative w-full aspect-video'>
                 <Image
                 src={image}
                 alt={title}

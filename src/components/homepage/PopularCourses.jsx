@@ -1,9 +1,18 @@
-import React from 'react';
+import CourseCard from '../allcourses/CourseCard';
 
-const PopularCourses = () => {
+const PopularCourses = async() => {
+    const res = await fetch('https://skill-sphere-amber.vercel.app/data.json');
+    const courses = await res.json();
+    const data = courses.slice(0, 3);
     return (
-        <div className="my-8">
-            This is popular courses section
+        <div>
+            <h1 className='text-2xl font-bold my-5'>Popular Courses</h1>
+            <div className='grid grid-cols-4 gap-6'>     
+            {
+                data.map((course) => <CourseCard key={course.id} course={course} />)
+                
+            }
+            </div>
         </div>
     );
 };

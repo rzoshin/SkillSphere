@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "John Doe",
+    "title": "Senior Full Stack Developer",
+    "expertise": ["JavaScript", "React", "Node.js", "MongoDB"],
+    "experience": "8+ years",
+    "rating": 4.8,
+    "students": 12000,
+    "courses": 6,
+    "bio": "Experienced full-stack developer specializing in modern web technologies and scalable applications.",
+    "image": "https://i.postimg.cc/1tWgFz7G/instructor1.png"
+  },
+  {
+    "id": 2,
+    "name": "Sarah Khan",
+    "title": "Frontend Engineer & UI Specialist",
+    "expertise": ["JavaScript", "UI/UX", "React", "CSS"],
+    "experience": "6+ years",
+    "rating": 4.7,
+    "students": 9500,
+    "courses": 4,
+    "bio": "Passionate frontend engineer focused on building intuitive and visually appealing user interfaces.",
+    "image": "https://i.postimg.cc/zfZyYz9M/instructor2.png"
+  },
+  {
+    "id": 3,
+    "name": "Michael Lee",
+    "title": "Data Scientist & ML Engineer",
+    "expertise": ["Python", "Machine Learning", "Deep Learning", "Data Analysis"],
+    "experience": "7+ years",
+    "rating": 4.9,
+    "students": 15000,
+    "courses": 5,
+    "bio": "Data scientist with strong expertise in machine learning, deep learning, and real-world data solutions.",
+    "image": "https://i.postimg.cc/8kZ8QK0y/instructor3.png"
+  }
+]
