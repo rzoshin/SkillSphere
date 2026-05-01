@@ -7,7 +7,7 @@
     "rating": 4.8,
     "level": "Beginner",
     "description": "Learn full-stack web development from scratch.",
-    "image": "https://i.ibb.co.com/GQ2yHXfH/web-Development.png",
+    "image": "https://i.ibb.co.com/bM9wZQ9S/webdev.png",
     "category": "Development"
   },
   {
@@ -18,7 +18,7 @@
     "rating": 4.7,
     "level": "Intermediate",
     "description": "Deep dive into modern JavaScript, ES6+, and async programming.",
-    "image": "https://i.ibb.co.com/LXnFQzZf/javascript.png",
+    "image": "https://i.ibb.co.com/zWC9pCDT/js.png",
     "category": "Development"
   },
   {
@@ -29,7 +29,7 @@
     "rating": 4.9,
     "level": "Beginner",
     "description": "Learn Python, data analysis, and visualization techniques.",
-    "image": "https://i.ibb.co.com/CFQChdV/python.png",
+    "image": "https://i.ibb.co.com/v5K1HbQ/python.png",
     "category": "Data Science"
   },
   {
@@ -40,7 +40,7 @@
     "rating": 4.6,
     "level": "Beginner",
     "description": "Understand design principles, wireframing, and prototyping.",
-    "image": "https://i.ibb.co.com/BkphTH5/ui-Ux.png",
+    "image": "https://i.ibb.co.com/Q7TY3Fbt/uiux.png",
     "category": "Design"
   },
   {
@@ -51,7 +51,7 @@
     "rating": 4.8,
     "level": "Advanced",
     "description": "Master machine learning algorithms and real-world projects.",
-    "image": "https://i.ibb.co.com/rR347mn6/machine-Learning.png",
+    "image": "https://i.ibb.co.com/1YpR4H48/ml.png",
     "category": "Data Science"
   },
   {
@@ -62,7 +62,7 @@
     "rating": 4.9,
     "level": "Intermediate",
     "description": "Build modern web apps using React and Next.js.",
-    "image": "https://i.ibb.co.com/MXFDRt2/react-Next.png",
+    "image": "https://i.ibb.co.com/WvXJR7FR/reactnext.png",
     "category": "Development"
   },
   {
@@ -73,7 +73,7 @@
     "rating": 4.5,
     "level": "Beginner",
     "description": "Learn how to protect systems, networks, and data from attacks.",
-    "image": "https://i.ibb.co.com/hFPqmMdb/security.png",
+    "image": "https://i.ibb.co.com/YB0Vf4g9/security.png",
     "category": "Security"
   },
   {
@@ -84,7 +84,7 @@
     "rating": 4.7,
     "level": "Intermediate",
     "description": "Understand cloud infrastructure and deploy apps using AWS.",
-    "image": "https://i.ibb.co.com/gZsR6QcQ/cloud-Computing.png",
+    "image": "https://i.ibb.co.com/23qHK0jf/cloud.png",
     "category": "Cloud"
   },
   {
@@ -95,7 +95,7 @@
   "rating": 4.9,
   "level": "Advanced",
   "description": "Build and train neural networks using TensorFlow and real-world datasets.",
-  "image": "https://i.ibb.co.com/k2j7Zd6p/deep-Learning.png",
+  "image": "https://i.ibb.co.com/mV7XQH8H/dl.png",
   "category": "Data Science"
 }
 ]

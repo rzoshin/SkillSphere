@@ -1,9 +1,11 @@
 "use client";
-
+import { authClient } from "@/lib/auth-client";
+import { useRouter } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
+
 import {FolderHouse, House, Person, PersonPlus} from '@gravity-ui/icons';
-import { Button } from "@heroui/react";
+import { Avatar, Button } from "@heroui/react";
 import {GraduationCap} from '@gravity-ui/icons';
 import {ArrowRightToSquare} from '@gravity-ui/icons';
 
@@ -12,6 +14,18 @@ import React from 'react';
 
 
 const Navbar = () => {
+  const router = useRouter();
+  const userData = authClient.useSession();
+  const user = userData?.data?.user;
+
+  const handleSignOut = async () => {
+    await authClient.signOut({
+  fetchOptions: {
+    onSuccess: () => {
+      router.push("/login"); // redirect to login page
+    },
+  },
+});
   return (
     <div className="border-b px-2">
       <nav className=" flex justify-between items-center py-3 max-w-7xl mx-auto w-full">
@@ -46,6 +60,7 @@ const Navbar = () => {
         </ul>
 
         <div>
+          {!user && (
             <ul className="flex items-center gap-4 text-lg">
               <li>
                 <Link href={"/login"}><Button variant="outline" size="lg"> <ArrowRightToSquare /> Login</Button></Link>
@@ -54,10 +69,29 @@ const Navbar = () => {
                 <Link href={"/register"}><Button variant="outline" size="lg"><PersonPlus/> Register</Button></Link>
               </li>
             </ul>
+          )}
+          {user && (
+            <ul className="flex items-center gap-4 text-sm">
+              <Avatar>
+                <Avatar.Image
+                  alt="Raiyan Zannat"
+                  src={user.image}
+                  referrerPolicy = "no-referrer"
+
+                />
+                <Avatar.Fallback>RZ</Avatar.Fallback>
+              </Avatar>
+              <p>Welcome, <br />{user.name}!</p>
+              <li>
+                <Button variant="danger" onClick={handleSignOut}>SignOut</Button>
+              </li>
+            </ul>
+          )}
+            
         </div>
       </nav>
     </div>
   );
 };
-
+}
 export default Navbar;
