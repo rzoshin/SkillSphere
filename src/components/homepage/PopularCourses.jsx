@@ -7,7 +7,7 @@ const PopularCourses = async() => {
     return (
         <div>
             <h1 className='text-2xl font-bold my-5'>Popular Courses</h1>
-            <div className='grid grid-cols-4 gap-6'>     
+            <div className='grid grid-cols-3 gap-6'>     
             {
                 data.map((course) => <CourseCard key={course.id} course={course} />)
                 
