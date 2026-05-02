@@ -1,7 +1,7 @@
 import InstructorCard from './InstructorCard';
 
 const TopInstructors = async() => {
-    const res = await fetch('https://skill-sphere-amber.vercel.app/instructors.json', {cache: 'force-cache'});
+    const res = await fetch('https://skill-sphere-amber.vercel.app/instructors.json', {cache: 'no-store'});
     const instructors = await res.json();
     const data = instructors.slice(0, 3);
     return (
