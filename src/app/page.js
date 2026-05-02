@@ -2,11 +2,10 @@ import Banner from "@/components/homepage/Banner";
 import LearningTips from "@/components/homepage/LearningTips";
 import PopularCourses from "@/components/homepage/PopularCourses";
 import TopInstructors from "@/components/homepage/TopInstructors";
-import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 dark:bg-black">
+    <div className="dark:bg-black">
      <Banner />
      <PopularCourses />
      <LearningTips />

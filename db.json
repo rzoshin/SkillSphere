@@ -1,0 +1,142 @@
+{
+    "courses" : [
+  {
+    "id": 1,
+    "title": "Complete Web Development Bootcamp",
+    "instructor": "John Doe",
+    "duration": "20 hours",
+    "rating": 4.8,
+    "level": "Beginner",
+    "description": "Learn full-stack web development from scratch.",
+    "image": "https://i.ibb.co.com/bM9wZQ9S/webdev.png",
+    "category": "Development"
+  },
+  {
+    "id": 2,
+    "title": "JavaScript Mastery",
+    "instructor": "Sarah Khan",
+    "duration": "15 hours",
+    "rating": 4.7,
+    "level": "Intermediate",
+    "description": "Deep dive into modern JavaScript, ES6+, and async programming.",
+    "image": "https://i.ibb.co.com/zWC9pCDT/js.png",
+    "category": "Development"
+  },
+  {
+    "id": 3,
+    "title": "Python for Data Science",
+    "instructor": "Michael Lee",
+    "duration": "18 hours",
+    "rating": 4.9,
+    "level": "Beginner",
+    "description": "Learn Python, data analysis, and visualization techniques.",
+    "image": "https://i.ibb.co.com/v5K1HbQ/python.png",
+    "category": "Data Science"
+  },
+  {
+    "id": 4,
+    "title": "UI/UX Design Fundamentals",
+    "instructor": "Emily Carter",
+    "duration": "12 hours",
+    "rating": 4.6,
+    "level": "Beginner",
+    "description": "Understand design principles, wireframing, and prototyping.",
+    "image": "https://i.ibb.co.com/Q7TY3Fbt/uiux.png",
+    "category": "Design"
+  },
+  {
+    "id": 5,
+    "title": "Machine Learning A-Z",
+    "instructor": "David Smith",
+    "duration": "25 hours",
+    "rating": 4.8,
+    "level": "Advanced",
+    "description": "Master machine learning algorithms and real-world projects.",
+    "image": "https://i.ibb.co.com/1YpR4H48/ml.png",
+    "category": "Data Science"
+  },
+  {
+    "id": 6,
+    "title": "React & Next.js Complete Guide",
+    "instructor": "Alex Johnson",
+    "duration": "22 hours",
+    "rating": 4.9,
+    "level": "Intermediate",
+    "description": "Build modern web apps using React and Next.js.",
+    "image": "https://i.ibb.co.com/WvXJR7FR/reactnext.png",
+    "category": "Development"
+  },
+  {
+    "id": 7,
+    "title": "Cybersecurity Basics",
+    "instructor": "Nina Patel",
+    "duration": "10 hours",
+    "rating": 4.5,
+    "level": "Beginner",
+    "description": "Learn how to protect systems, networks, and data from attacks.",
+    "image": "https://i.ibb.co.com/YB0Vf4g9/security.png",
+    "category": "Security"
+  },
+  {
+    "id": 8,
+    "title": "Cloud Computing with AWS",
+    "instructor": "Robert Wilson",
+    "duration": "16 hours",
+    "rating": 4.7,
+    "level": "Intermediate",
+    "description": "Understand cloud infrastructure and deploy apps using AWS.",
+    "image": "https://i.ibb.co.com/23qHK0jf/cloud.png",
+    "category": "Cloud"
+  },
+  {
+  "id": 9,
+  "title": "Deep Learning with TensorFlow",
+  "instructor": "Andrew Miller",
+  "duration": "24 hours",
+  "rating": 4.9,
+  "level": "Advanced",
+  "description": "Build and train neural networks using TensorFlow and real-world datasets.",
+  "image": "https://i.ibb.co.com/mV7XQH8H/dl.png",
+  "category": "Data Science"
+}
+],
+"instructors" : [
+  {
+    "id": 1,
+    "name": "John Doe",
+    "title": "Senior Full Stack Developer",
+    "expertise": ["JavaScript", "React", "Node.js", "MongoDB"],
+    "experience": "8+ years",
+    "rating": 4.8,
+    "students": 12000,
+    "courses": 6,
+    "bio": "Experienced full-stack developer specializing in modern web technologies and scalable applications.",
+    "image": "https://i.postimg.cc/1tWgFz7G/instructor1.png"
+  },
+  {
+    "id": 2,
+    "name": "Sarah Khan",
+    "title": "Frontend Engineer & UI Specialist",
+    "expertise": ["JavaScript", "UI/UX", "React", "CSS"],
+    "experience": "6+ years",
+    "rating": 4.7,
+    "students": 9500,
+    "courses": 4,
+    "bio": "Passionate frontend engineer focused on building intuitive and visually appealing user interfaces.",
+    "image": "https://i.postimg.cc/zfZyYz9M/instructor2.png"
+  },
+  {
+    "id": 3,
+    "name": "Michael Lee",
+    "title": "Data Scientist & ML Engineer",
+    "expertise": ["Python", "Machine Learning", "Deep Learning", "Data Analysis"],
+    "experience": "7+ years",
+    "rating": 4.9,
+    "students": 15000,
+    "courses": 5,
+    "bio": "Data scientist with strong expertise in machine learning, deep learning, and real-world data solutions.",
+    "image": "https://i.postimg.cc/8kZ8QK0y/instructor3.png"
+  }
+]
+
+}

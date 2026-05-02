@@ -4,23 +4,22 @@ import Image from "next/image";
 
 const Banner = () => {
   return (
-    <div className="relative h-[60vh] w-full rounded-lg shadow-2xl mt-5 overflow-hidden">
+    <div className="relative min-h-[90vh] w-full rounded-lg shadow-2xl mt-5">
         <Image
           src="/banner.png"
           alt="Banner"
           fill
           className="absolute inset-0 w-full h-full object-cover"
         />
-      <div className="absolute inset-0 p-20 flex items-center">
+      <div className="absolute inset-0 p-18 flex items-center">
         {/* content */}
-        <div className="max-w-7xl mx-auto px-6 text-white">
+        <div className="px-6 text-white">
           <h1 className="text-4xl md:text-6xl font-bold mb-4 max-w-2xl leading-tight">
-            Upgrade Your Skills for the Future
+            Take Your Skills to the Next Level
           </h1>
 
           <p className="text-lg md:text-xl mb-6 max-w-xl text-gray-300">
-            Learn Web Development, Design, Data Science, and more with
-            industry-focused courses built for real-world success.
+            Learn skills that actually matter. Join 2.1 million learners building real-world expertise. Our courses are built around hands-on projects, expert mentors, and career-ready outcomes.
           </p>
 
           <div className="flex flex-wrap gap-4">

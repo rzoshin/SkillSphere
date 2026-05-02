@@ -1,5 +1,5 @@
 "use client";
-import { Check } from "@gravity-ui/icons";
+import { Check, Envelope } from "@gravity-ui/icons";
 import {
   Button,
   Card,
@@ -12,6 +12,8 @@ import {
 } from "@heroui/react";
 import { Icon } from "@iconify/react";
 import { authClient } from "@/lib/auth-client";
+import { toast } from "react-toastify";
+import Link from "next/link";
 
 
 export default function LoginPage() {
@@ -27,6 +29,10 @@ export default function LoginPage() {
     rememberMe: true,
     callbackURL: "/",
     });
+    if(error) {
+      toast.error(error.message);
+      return;
+    }
   };
 
   const handleGoogleSignIn = async () => {
@@ -101,7 +107,18 @@ export default function LoginPage() {
             <Icon icon="devicon:google" />
             Sign in with Google
         </Button>
-      </div>
+        </div>
+        <div className="w-96 mx-auto">
+        <p className="text-center text-sm text-gray-500 my-4">Dont have an account? </p>
+        <Link href="/register">
+          <Button variant="tertiary" className="w-full">
+            <Envelope />
+            Register with Email
+          </Button>
+        </Link>
+        </div>
+        
+      
         
 
     </Card>

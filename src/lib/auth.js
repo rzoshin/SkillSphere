@@ -9,6 +9,10 @@ export const auth = betterAuth({
     database: mongodbAdapter(db, {
     client
   }),
+  trustedOrigins: [
+    "http://localhost:3000",
+    "https://skill-sphere-amber.vercel.app",
+  ],
      emailAndPassword: { 
     enabled: true, 
   },

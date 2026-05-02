@@ -10,6 +10,7 @@ import {GraduationCap} from '@gravity-ui/icons';
 import {ArrowRightToSquare} from '@gravity-ui/icons';
 
 import React from 'react';
+import NavLink from "./NavLink";
 
 const Navbar = () => {
   const router = useRouter();
@@ -26,7 +27,7 @@ const Navbar = () => {
   });
 }
   return (
-    <div className="border-b px-2">
+    <div className="px-2">
       <nav className=" flex justify-between items-center py-3 max-w-7xl mx-auto w-full">
         <div className="flex gap-2 items-center">
           <div className="w-10 md:w-12">
@@ -46,15 +47,15 @@ const Navbar = () => {
           </h3>
         </div>
 
-        <ul className="flex items-center gap-5 text-lg">
+        <ul className="flex items-center gap-5 text-base">
           <li>
-            <Link href={"/"}><Button variant="ghost" size="lg" className="rounded-none"><House/> Home</Button></Link>
+            <NavLink href={"/"}><House/> Home</NavLink>
           </li>
           <li>
-            <Link href={"/all-courses"}><Button variant="ghost" size="lg" className="rounded-none"><GraduationCap/> All Courses</Button></Link>
+            <NavLink href={"/all-courses"}> <GraduationCap/> All Courses </NavLink>
           </li>
           <li>
-            <Link href={"/profile"}><Button variant="ghost" size="lg" className="rounded-none"><Person/>My Profile</Button></Link>
+            <NavLink href={"/profile"}><Person/>My Profile</NavLink>
           </li>
         </ul>
 
@@ -73,11 +74,11 @@ const Navbar = () => {
             <ul className="flex items-center gap-4 text-sm">
               <Avatar>
                 <Avatar.Image
-                  alt="Raiyan Zannat"
+                  alt="{user.name}"
                   src={user.image}
                   referrerPolicy = "no-referrer"
                 />
-                <Avatar.Fallback>RZ</Avatar.Fallback>
+                <Avatar.Fallback>{user.name.split(' ').map(n => n[0]).join('')}</Avatar.Fallback>
               </Avatar>
               <p>Welcome, <br />{user.name}!</p>
               <li>

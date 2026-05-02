@@ -1,35 +1,48 @@
 import { Card, Chip } from "@heroui/react";
 import Image from "next/image";
 
-const InstructorCard = ({instructor}) => {
-    const {name, title, bio} = instructor;
-    return (
-        <Card className='rounded-xl'>
-            {/* <div className='relative w-full aspect-video'>
-                <Image
-                src={image}
-                alt={title}
-                fill
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                className='rounded-xl object-cover'
-                />
-                <Chip size="sm" color="accent" className='absolute right-2 top-2'>{category}</Chip>
-            </div> */}
-            <div>
-                <h2 className='font-medium'>{name}</h2>
+const InstructorCard = ({ instructor }) => {
+  const { name, image, title, bio, expertise, experience, rating, students } = instructor;
+  return (
+    <Card className="rounded-xl p-7 border border-gray-200 shadow-lg hover:shadow-xl transition-shadow duration-300">
+      <div className="flex gap-6 items-center">
+        <div className="relative w-60 aspect-square">
+          <Image
+            src={image}
+            alt={title}
+            fill
+            sizes="(max-width: 768px) 40vw, (max-width: 1200px) 25vw, 20vw"
+            className="object-cover rounded-full"
+          />
+        </div>
+        <div className="flex flex-col gap-2">
+          <div>
+            <h2 className="font-medium text-2xl">{name}</h2>
+          </div>
+          <div>
+            <h2 className="font-medium text-xl">{title}</h2>
+          </div>
+          <div>
+            <p>{bio}</p>
+          </div>
+          <div>
+            {
+            expertise.map((skill, index) => (
+              <Chip key={index} className="mr-2 mb-2 bg-white text-md border border-full" color="accent">
+                {skill}
+              </Chip>
+            ))
+          }
+          </div>
+          
+          <span className="font-medium">Experience: {experience}</span>
+            <div className="flex gap-4 mt-2">
+                <span className="font-medium">Rating: {rating}</span>
             </div>
-            <div>
-                <h2 className='font-medium'>{title}</h2>
-            </div>
-            <div>
-                <p>{bio}</p>
-            </div>
-            {/* <Link href={`/photos/${id}`}>
-                <Button variant="primary" className="w-full">View</Button>
-            </Link> */}
-        </Card>
-
-    );
+        </div>
+      </div>
+    </Card>
+  );
 };
 
 export default InstructorCard;

@@ -31,9 +31,10 @@ export default function RegisterPage() {
     });
     if (error) {
       console.log("SIGNUP ERROR:", error);
+      toast.error(error.message);
     }
     if (!error) {
-      router.push("/signin");
+      router.push("/login");
     }
   };
 

@@ -1,30 +1,61 @@
 "use client";
-import { UpdateUserInfo } from "@/components/UpdateUserInfo";
+
 import { authClient } from "@/lib/auth-client";
-import { Avatar, Card } from "@heroui/react";
+import { Envelope, PencilToSquare, PersonPencil } from "@gravity-ui/icons";
+import { Button, Input, Label, Modal, Surface, TextField } from "@heroui/react";
 
-const ProfilePage = () => {
-  const userData = authClient.useSession();
-  const user = userData.data?.user;
+export function UpdateUserInfo() {
+    const onSubmit = async (e) => {
+        e.preventDefault();
+        const name = e.target.name.value;
+        const image = e.target.image.value;
 
-  
+        await authClient.updateUser({
+        name: name,
+        image: image,
+    })
+    }
+
+    
   return (
-    <div>
-      <Card className="max-w-96 mx-auto flex flex-col items-center border mt-5">
-        <Avatar className="w-30 h-30">
-          <Avatar.Image
-            alt="Raiyan Zannat"
-            src={user?.image}
-            referrerPolicy="no-referrer"
-          />
-          <Avatar.Fallback>RZ</Avatar.Fallback>
-        </Avatar>
-        <h2 className="text-2xl font-medium">{user?.name}</h2>
-        <p>{user?.email}</p>
-        <UpdateUserInfo />
-      </Card>
-    </div>
+    <Modal>
+      <Button variant="secondary">
+        {" "}
+        <PencilToSquare /> Update Info
+      </Button>
+      <Modal.Backdrop>
+        <Modal.Container placement="auto">
+          <Modal.Dialog className="sm:max-w-md">
+            <Modal.CloseTrigger />
+            <Modal.Header>
+              <Modal.Icon className="bg-accent-soft text-accent-soft-foreground">
+                <PersonPencil />
+              </Modal.Icon>
+              <Modal.Heading>Update Profile</Modal.Heading>
+            </Modal.Header>
+            <Modal.Body className="p-6">
+              <Surface variant="default">
+                <form onSubmit={onSubmit} className="flex flex-col gap-4">
+                  <TextField className="w-full" name="name" type="text">
+                    <Label>Name</Label>
+                    <Input placeholder="Enter your name" />
+                  </TextField>
+                  <TextField className="w-full" name="image" type="url">
+                    <Label>Image URL</Label>
+                    <Input placeholder="Enter the image URL" />
+                  </TextField>
+                  <Modal.Footer>
+                    <Button slot="close" variant="secondary">
+                      Cancel
+                    </Button>
+                    <Button type="submit" slot="close">Save</Button>
+                  </Modal.Footer>
+                </form>
+              </Surface>
+            </Modal.Body>
+          </Modal.Dialog>
+        </Modal.Container>
+      </Modal.Backdrop>
+    </Modal>
   );
-};
-
-export default ProfilePage;
+}
