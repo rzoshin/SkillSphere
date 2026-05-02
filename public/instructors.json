@@ -9,7 +9,7 @@
     "students": 12000,
     "courses": 6,
     "bio": "Experienced full-stack developer specializing in modern web technologies and scalable applications.",
-    "image": "https://i.postimg.cc/1tWgFz7G/instructor1.png"
+    "image": "https://i.ibb.co.com/tpgxGW34/joseph-gonzalez-i-Fg-Rcq-Hznqg-unsplash.jpg"
   },
   {
     "id": 2,
@@ -21,7 +21,7 @@
     "students": 9500,
     "courses": 4,
     "bio": "Passionate frontend engineer focused on building intuitive and visually appealing user interfaces.",
-    "image": "https://i.postimg.cc/zfZyYz9M/instructor2.png"
+    "image": "https://i.ibb.co.com/HD4Bf31K/michael-dam-m-EZ3-Po-FGs-k-unsplash.jpg"
   },
   {
     "id": 3,
@@ -33,6 +33,6 @@
     "students": 15000,
     "courses": 5,
     "bio": "Data scientist with strong expertise in machine learning, deep learning, and real-world data solutions.",
-    "image": "https://i.postimg.cc/8kZ8QK0y/instructor3.png"
+    "image": "https://i.ibb.co.com/67LBscDW/ian-dooley-d1-UPki-Fd04-A-unsplash.jpg"
   }
 ]
