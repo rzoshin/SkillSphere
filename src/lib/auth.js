@@ -1,12 +1,17 @@
 import { betterAuth } from "better-auth";
 import { mongodbAdapter } from "better-auth/adapters/mongodb";
-import clientPromise from "@/lib/mongodb"; // 👈 import it
-
-const client = await clientPromise;
-const db = client.db();
+import clientPromise from "@/lib/mongodb";
 
 export const auth = betterAuth({
-  database: mongodbAdapter(db, { client }),
+  database: mongodbAdapter(
+    async () => {
+      const client = await clientPromise;
+      return client.db();
+    },
+    {
+      client: async () => await clientPromise,
+    }
+  ),
   trustedOrigins: [
     "http://localhost:3000",
     "https://skill-sphere-amber.vercel.app",
