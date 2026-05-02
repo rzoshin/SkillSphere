@@ -70,7 +70,7 @@ const Footer = () => {
             <ul className="space-y-3 text-sm text-gray-600 dark:text-gray-400">
               <li>
                 <Link
-                  href="/courses"
+                  href="/all-courses"
                   className="hover:text-black dark:hover:text-white transition"
                 >
                   All Courses
@@ -155,7 +155,7 @@ const Footer = () => {
             </p>
 
             <Link
-              href="/courses"
+              href="/all-courses"
               className="inline-flex items-center justify-center px-5 py-2.5 rounded-full 
     bg-black text-white dark:bg-white dark:text-black 
     text-sm font-medium transition-all duration-200 

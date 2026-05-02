@@ -27,12 +27,15 @@ export default function LoginPage() {
     email: email, // required
     password: password, // required
     rememberMe: true,
-    callbackURL: "/",
     });
     if(error) {
       toast.error(error.message);
       return;
     }
+    if (!error) {
+    const callbackUrl = searchParams.get("callbackUrl") || "/";
+    router.push(callbackUrl); // ← redirects back to course page
+  }
   };
 
   const handleGoogleSignIn = async () => {
@@ -44,7 +47,7 @@ export default function LoginPage() {
   return (
     <div className="">
     <Card className="border mx-auto w-180 py-10 mt-4">
-      <h1 className="text-center text-2xl font-bold">Sign In</h1>
+      <h1 className="text-center text-3xl font-bold my-5 text-[#002f5f]">Sign In</h1>
 
       <Form className="flex w-96 mx-auto flex-col gap-4" onSubmit={onSubmit}>
         <TextField

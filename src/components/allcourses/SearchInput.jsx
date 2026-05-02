@@ -1,26 +1,40 @@
 "use client";
-import { Button, InputGroup, SearchFieldSearchIcon, TextField } from "@heroui/react";
-import React, { useState } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
+import { useState } from "react";
+import { TextField, InputGroup, Button, SearchFieldSearchIcon } from "@heroui/react";
 
 const SearchInput = () => {
-    const [searchInp, setSearchInp] = useState("");
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const [value, setValue] = useState(searchParams.get("q") || "");
+
+  const handleSearch = () => {
+    const params = new URLSearchParams();
+    if (value) params.set("q", value);
+    router.push(`/all-courses?${params.toString()}`);
+  };
+
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") handleSearch();
+  };
+
   return (
-    <div>
-      <TextField className="w-60" name="email">
-        <InputGroup>
-          <InputGroup.Input
+    <TextField className="w-60">
+      <InputGroup>
+        <InputGroup.Input
           type="text"
-          value={searchInp} 
           placeholder="Search Courses"
-          onChange={e => {setSearchInp(e.target.value)}} />
-          <InputGroup.Suffix>
-            <Button variant="text" color="accent">
-              <SearchFieldSearchIcon />
-            </Button>
-          </InputGroup.Suffix>
-        </InputGroup>
-      </TextField>
-    </div>
+          value={value}
+          onChange={(e) => setValue(e.target.value)}
+          onKeyDown={handleKeyDown}
+        />
+        <InputGroup.Suffix>
+          <Button variant="text" color="accent" onPress={handleSearch}>
+            <SearchFieldSearchIcon />
+          </Button>
+        </InputGroup.Suffix>
+      </InputGroup>
+    </TextField>
   );
 };
 

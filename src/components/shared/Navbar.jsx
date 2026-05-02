@@ -27,7 +27,7 @@ const Navbar = () => {
   });
 }
   return (
-    <div className="px-2">
+    <div className="px-2 font-poppins">
       <nav className=" flex justify-between items-center py-3 max-w-7xl mx-auto w-full">
         <div className="flex gap-2 items-center">
           <div className="w-10 md:w-12">

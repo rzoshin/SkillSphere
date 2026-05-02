@@ -72,7 +72,7 @@ export default function LearningTips() {
   return (
     <div className="max-w-7xl mx-auto my-20">
       <h1 className="text-4xl text-center font-bold my-5 text-[#002f5f]">
-        Study Tips
+        Learning Tips
       </h1>
       <Swiper
         effect={"cards"}

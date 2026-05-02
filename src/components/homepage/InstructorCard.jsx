@@ -4,7 +4,7 @@ import Image from "next/image";
 const InstructorCard = ({ instructor }) => {
   const { name, image, title, bio, expertise, experience, rating, students } = instructor;
   return (
-    <Card className="rounded-xl p-7 border border-gray-200 shadow-lg hover:shadow-xl transition-shadow duration-300">
+    <Card className="border border-indigo-100 rounded-xl px-5 py-4 bg-indigo-100/20 hover:border-indigo-300 transition-colors">
       <div className="flex gap-6 items-center">
         <div className="relative w-60 aspect-square">
           <Image
@@ -17,13 +17,13 @@ const InstructorCard = ({ instructor }) => {
         </div>
         <div className="flex flex-col gap-2">
           <div>
-            <h2 className="font-medium text-2xl">{name}</h2>
+            <h2 className="font-medium text-2xl text-indigo-800">{name}</h2>
           </div>
           <div>
-            <h2 className="font-medium text-xl">{title}</h2>
+            <h2 className="font-medium text-xl text-indigo-400">{title}</h2>
           </div>
           <div>
-            <p>{bio}</p>
+            <p className="text-gray-800">{bio}</p>
           </div>
           <div>
             {

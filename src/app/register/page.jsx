@@ -1,6 +1,6 @@
 "use client";
 import { authClient } from "@/lib/auth-client";
-import { Check } from "@gravity-ui/icons";
+import { Check, Envelope } from "@gravity-ui/icons";
 import {
   Button,
   Card,
@@ -11,6 +11,8 @@ import {
   Label,
   TextField,
 } from "@heroui/react";
+import { Icon } from "@iconify/react";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 export default function RegisterPage() {
@@ -34,14 +36,18 @@ export default function RegisterPage() {
       toast.error(error.message);
     }
     if (!error) {
+      await authClient.signOut();
       router.push("/login");
     }
   };
-
+  const handleGoogleSignIn = async () => {
+    await authClient.signIn.social({
+    provider: "google",
+  })};
   return (
     <div className="">
       <Card className="border mx-auto w-180 py-10 mt-4">
-        <h1 className="text-center text-2xl font-bold">Sign Up</h1>
+        <h1 className="text-center text-3xl font-bold my-5 text-[#002f5f]">Create a New Account</h1>
 
         <Form className="flex w-96 mx-auto flex-col gap-4" onSubmit={onSubmit}>
           <TextField isRequired name="name" type="text">
@@ -110,6 +116,28 @@ export default function RegisterPage() {
             </Button>
           </div>
         </Form>
+        <div className="w-96 mx-auto">
+          <p className="text-center text-sm text-gray-500 my-4">or</p>
+          <Button
+            onClick={handleGoogleSignIn}
+            variant="tertiary"
+            className="w-full"
+          >
+            <Icon icon="devicon:google" />
+            Sign in with Google
+          </Button>
+        </div>
+        <div className="w-96 mx-auto">
+          <p className="text-center text-sm text-gray-500 my-4">
+            Already have an account?{" "}
+          </p>
+          <Link href="/login">
+            <Button variant="tertiary" className="w-full">
+              <Envelope />
+              Login with Email
+            </Button>
+          </Link>
+        </div>
       </Card>
     </div>
   );

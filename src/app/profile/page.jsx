@@ -1,8 +1,10 @@
 "use client";
 
-import { UpdateUserInfo } from "@/components/profile/page";
+import { UpdateUserInfo } from "@/components/profile/UpdateUserInfo";
 import { authClient } from "@/lib/auth-client";
-import { Avatar, Card } from "@heroui/react";
+import { PencilToSquare } from "@gravity-ui/icons";
+import { Avatar, Button, Card } from "@heroui/react";
+import Link from "next/link";
 import { redirect } from "next/navigation";
 
 const ProfilePage = () => {
@@ -25,7 +27,11 @@ const ProfilePage = () => {
         </Avatar>
         <h2 className="text-2xl font-medium">{user?.name}</h2>
         <p>{user?.email}</p>
-        <UpdateUserInfo />
+        <Link href="/update-user-info"><Button variant="secondary">
+        {" "}
+        <PencilToSquare /> Update Info
+        </Button>
+        </Link>
       </Card>
     </div>
   );
