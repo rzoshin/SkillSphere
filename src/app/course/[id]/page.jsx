@@ -24,7 +24,7 @@ const CourseDetailsPage = async ({ params }) => {
       {/* Hero */}
       <div className="relative w-full h-90 md:h-96 rounded-2xl overflow-hidden mb-10">
         <img src={image} alt={title} className="w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-linear-to-t from-[#0f172a]/90 via-[#0f172a]/40 to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-t from-[#04060c] via-[#0f172a]/40 to-transparent" />
         <div className="absolute bottom-6 left-6 right-6">
           <span className="text-xs font-medium bg-indigo-500 text-white px-3 py-1 rounded-full">
             {category}

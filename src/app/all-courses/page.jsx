@@ -1,4 +1,4 @@
-import CourseCard from "@/components/allcourses/CourseCard";
+import CourseCard from "@/components/ui/CourseCard";
 import SearchInput from "@/components/allcourses/SearchInput";
 
  const AllCoursesPage = async ({ searchParams }) => {
