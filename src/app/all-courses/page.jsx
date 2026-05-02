@@ -4,7 +4,7 @@ import SearchInput from "@/components/allcourses/SearchInput";
 import { Button, InputGroup, SearchFieldSearchIcon, TextField } from "@heroui/react";
 
 const AllCoursesPage = async() => {
-  const res = await fetch("https://skill-sphere-amber.vercel.app/courses");
+  const res = await fetch("https://skill-sphere-amber.vercel.app/data.json", {cache: 'no-store'});
   const allCourses = await res.json();
   return (
     <div className="max-w-7xl mx-auto">
