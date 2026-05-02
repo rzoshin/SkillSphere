@@ -3,13 +3,12 @@ import { MongoClient } from "mongodb";
 const uri = process.env.MONGODB_URI;
 
 if (!uri) {
-  throw new Error("Please add MONGODB_URI to your environment variables");
+  throw new Error("MONGODB_URI is missing");
 }
 
 let client;
 let clientPromise;
 
-// Prevent multiple connections in dev + serverless
 if (!global._mongoClientPromise) {
   client = new MongoClient(uri);
   global._mongoClientPromise = client.connect();
