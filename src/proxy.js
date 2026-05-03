@@ -1,7 +1,9 @@
 import { NextResponse } from 'next/server'
 
 export async function proxy(request) {
-  const sessionCookie = request.cookies.get("better-auth.session_token");
+  const sessionCookie =
+    request.cookies.get("__Secure-better-auth.session_token") || // production
+    request.cookies.get("better-auth.session_token");            // localhost
 
   if (!sessionCookie) {
     const loginUrl = new URL("/login", request.url);
