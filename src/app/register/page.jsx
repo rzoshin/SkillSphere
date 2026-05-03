@@ -32,10 +32,10 @@ export default function RegisterPage() {
       image: image,
     });
     if (error) {
-      console.log("SIGNUP ERROR:", error);
       toast.error(error.message);
     }
     if (!error) {
+      toast.success("Account created successfully");
       await authClient.signOut();
       router.push("/login");
     }
