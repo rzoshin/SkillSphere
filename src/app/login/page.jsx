@@ -20,7 +20,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 export default function LoginPage() {
   const router = useRouter();
   const searchParams = useSearchParams();
-  
+
   const onSubmit = async (e) => {
     e.preventDefault();
 
@@ -37,6 +37,7 @@ export default function LoginPage() {
       return;
     }
     if (!error) {
+    toast.success("Logged in successfully");
     const callbackUrl = searchParams.get("callbackUrl") || "/";
     router.push(callbackUrl); // ← redirects back to course page
   }
