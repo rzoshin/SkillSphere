@@ -6,7 +6,7 @@ const TopInstructors = async() => {
     const data = instructors.slice(0, 3);
     return (
         <div className='max-w-7xl mx-auto my-10'>
-            <h1 className='text-4xl text-center font-bold my-5 text-[#002f5f]'>Top Instructors</h1>
+            <h1 className='text-4xl font-bold my-5 text-[#002f5f]'>Top Instructors</h1>
             <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>     
             {
                 data.map((instructor) => <InstructorCard key={instructor.id} instructor={instructor} />)

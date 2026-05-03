@@ -14,9 +14,13 @@ import { Icon } from "@iconify/react";
 import { authClient } from "@/lib/auth-client";
 import { toast } from "react-toastify";
 import Link from "next/link";
+import { useRouter, useSearchParams } from "next/navigation";
 
 
 export default function LoginPage() {
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  
   const onSubmit = async (e) => {
     e.preventDefault();
 

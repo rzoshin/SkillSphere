@@ -9,7 +9,7 @@ const PopularCourses = async () => {
   return (
     <div className='max-w-7xl mx-auto my-20 px-4'>
       <div className="flex justify-between items-center mb-8">
-        <h2 className='text-4xl font-bold text-[#002f5f]'>Popular Courses</h2>
+        <h2 className='text-4xl font-bold text-[#002f5f] text-center'>Popular Courses</h2>
         <Link href="/all-courses" className="text-sm text-indigo-500 hover:text-indigo-700 font-medium">
           View all →
         </Link>
