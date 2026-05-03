@@ -50,11 +50,11 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="">
-    <Card className="border mx-auto w-180 py-10 mt-4">
+    <div className="px-4 py-6">
+    <Card className="border mx-auto w-full max-w-lg py-10 mt-4">
       <h1 className="text-center text-3xl font-bold my-5 text-[#002f5f]">Sign In</h1>
 
-      <Form className="flex w-96 mx-auto flex-col gap-4" onSubmit={onSubmit}>
+      <Form className="flex w-full max-w-sm mx-auto px-4 flex-col gap-4" onSubmit={onSubmit}>
         <TextField
           isRequired
           name="email"
@@ -109,14 +109,14 @@ export default function LoginPage() {
           </Button>
         </div>
       </Form>
-      <div className="w-96 mx-auto">
+      <div className="w-full max-w-sm mx-auto px-4">
         <p className="text-center text-sm text-gray-500 my-4">or</p>
         <Button onClick={handleGoogleSignIn} variant="tertiary" className="w-full">
             <Icon icon="devicon:google" />
             Sign in with Google
         </Button>
         </div>
-        <div className="w-96 mx-auto">
+        <div className="w-full max-w-sm mx-auto px-4">
         <p className="text-center text-sm text-gray-500 my-4">Dont have an account? </p>
         <Link href="/register">
           <Button variant="tertiary" className="w-full">
@@ -125,6 +125,7 @@ export default function LoginPage() {
           </Button>
         </Link>
         </div>
+
     </Card>
     </div>
   );

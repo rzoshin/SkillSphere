@@ -2,6 +2,7 @@
 import { authClient } from "@/lib/auth-client";
 import { Button, Card, Form, Input, Label, TextField } from "@heroui/react";
 import Link from "next/link";
+import { redirect } from "next/navigation";
 import React from "react";
 
 const UpdateUserInfo = () => {
@@ -13,7 +14,9 @@ const UpdateUserInfo = () => {
     await authClient.updateUser({
       name: name,
       image: image,
+      callbackUrl: "/profile",
     });
+    redirect("/profile");
   };
   return (
     <Card className="border mx-auto w-180 py-10 mt-4">

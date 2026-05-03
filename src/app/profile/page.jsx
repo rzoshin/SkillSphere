@@ -1,9 +1,8 @@
 "use client";
 
-import { UpdateUserInfo } from "@/components/profile/UpdateUserInfo";
 import { authClient } from "@/lib/auth-client";
 import { PencilToSquare } from "@gravity-ui/icons";
-import { Avatar, Button, Card } from "@heroui/react";
+import { Avatar, Button, Card, Spinner } from "@heroui/react";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 
@@ -11,6 +10,11 @@ const ProfilePage = () => {
   const userData = authClient.useSession();
   const user = userData.data?.user;
 
+  if (userData.isPending) {
+    return <div className="flex justify-center items-center w-full h-screen">
+        <Spinner color="accent" size="xl"/>
+        </div> // ← wait for session to load
+  }
   if(!user) {
     redirect("/login");
   }

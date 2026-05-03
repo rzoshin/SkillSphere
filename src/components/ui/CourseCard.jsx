@@ -1,3 +1,5 @@
+import { ArrowDownToLine, ArrowUpRight } from "@gravity-ui/icons";
+import { Button } from "@heroui/react";
 import Link from "next/link";
 
 const CourseCard = ({ course }) => {
@@ -8,7 +10,7 @@ const CourseCard = ({ course }) => {
 };
   const { id, title, instructor, rating, level, duration, category, image } = course;
   return (
-    <Link href={`/courses/${id}`} className="group bg-white border border-gray-100 rounded-2xl overflow-hidden hover:shadow-lg hover:border-indigo-200 transition-all duration-300 flex flex-col">
+    <div className="group bg-white border border-gray-100 rounded-2xl overflow-hidden hover:shadow-lg hover:border-indigo-200 transition-all duration-300 flex flex-col">
       <div className="relative h-48 overflow-hidden">
         <img src={image} alt={title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
         <span className={`absolute top-3 left-3 text-xs font-medium px-2.5 py-1 rounded-full border ${levelColor[level] || "bg-indigo-50 text-indigo-600"}`}>
@@ -21,10 +23,10 @@ const CourseCard = ({ course }) => {
         <p className="text-sm text-gray-500">{instructor}</p>
         <div className="flex items-center justify-between mt-auto pt-3 border-t border-gray-50">
           <span className="text-sm font-medium text-gray-700">⭐ {rating}</span>
-          <span className="text-xs text-gray-400">{duration}</span>
+          <Link href={`/course/${id}`} className="text-xs text-gray-400"><Button>View Details<ArrowUpRight /></Button></Link>
         </div>
       </div>
-    </Link>
+    </div>
   );
 };
 
