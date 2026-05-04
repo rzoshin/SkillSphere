@@ -19,7 +19,7 @@ const SearchInput = () => {
   };
 
   return (
-    <TextField className="w-60">
+    <TextField className="w-32 sm:w-48 md:w-60">
       <InputGroup>
         <InputGroup.Input
           type="text"
