@@ -5,10 +5,12 @@ import { PencilToSquare } from "@gravity-ui/icons";
 import { Avatar, Button, Card, Spinner } from "@heroui/react";
 import Link from "next/link";
 import { redirect } from "next/navigation";
+import { useRouter } from "next/navigation";
 
 const ProfilePage = () => {
   const userData = authClient.useSession();
   const user = userData.data?.user;
+  const router = useRouter();
 
   if (userData.isPending) {
     return <div className="flex justify-center items-center w-full h-screen">
@@ -16,7 +18,7 @@ const ProfilePage = () => {
         </div> // ← wait for session to load
   }
   if(!user) {
-    redirect("/login");
+    router.push("/login");
   }
   return (
     <div>
