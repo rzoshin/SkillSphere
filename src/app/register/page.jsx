@@ -5,6 +5,7 @@ import { Button, Card, Description, FieldError, Form, Input, Label, TextField } 
 import { Icon } from "@iconify/react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { toast } from "react-toastify";
 
 export default function RegisterPage() {
   const router = useRouter();
