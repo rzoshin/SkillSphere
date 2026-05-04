@@ -78,7 +78,7 @@ const tips = [
 
 export default function LearningTips() {
   return (
-    <div className="max-w-7xl mx-auto my-20 px-4">
+    <div className="max-w-7xl mx-auto my-20 px-10 sm:px-4">
       <p className="text-center text-indigo-400 font-medium text-sm uppercase tracking-widest mb-2">
         Study Smarter
       </p>
@@ -93,7 +93,7 @@ export default function LearningTips() {
         effect="cards"
         grabCursor={true}
         modules={[EffectCards]}
-        className="w-80 h-[460px]"
+        className="w-72 sm:w-80 h-110 sm:h-115"
         style={{ margin: "0 auto" }}
       >
         {tips.map((tip) => (

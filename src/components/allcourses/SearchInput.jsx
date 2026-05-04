@@ -1,7 +1,7 @@
 "use client";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useState } from "react";
-import { TextField, InputGroup, Button, SearchFieldSearchIcon } from "@heroui/react";
+import { Search } from "lucide-react"; // or any icon you prefer
 
 const SearchInput = () => {
   const router = useRouter();
@@ -19,22 +19,19 @@ const SearchInput = () => {
   };
 
   return (
-    <TextField className="w-32 sm:w-48 md:w-60">
-      <InputGroup>
-        <InputGroup.Input
-          type="text"
-          placeholder="Search Courses"
-          value={value}
-          onChange={(e) => setValue(e.target.value)}
-          onKeyDown={handleKeyDown}
-        />
-        <InputGroup.Suffix>
-          <Button variant="text" color="accent" onPress={handleSearch}>
-            <SearchFieldSearchIcon />
-          </Button>
-        </InputGroup.Suffix>
-      </InputGroup>
-    </TextField>
+    <div className="flex items-center gap-2 border border-gray-200 rounded-xl px-3 py-2 bg-white shadow-sm">
+      <input
+        type="text"
+        placeholder="Search Courses"
+        value={value}
+        onChange={(e) => setValue(e.target.value)}
+        onKeyDown={handleKeyDown}
+        className="flex-1 outline-none text-sm text-gray-600 placeholder:text-gray-400 bg-transparent"
+      />
+      <button onClick={handleSearch} className="text-gray-400 hover:text-[#002f5f] transition-colors">
+        <Search size={16} />
+      </button>
+    </div>
   );
 };
 

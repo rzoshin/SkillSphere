@@ -33,7 +33,7 @@ export default function RootLayout({ children }) {
       data-theme="light"
       className={`${poppins.variable} ${serif.variable} ${inter.variable} h-full antialiased`}
     >
-      <body className="min-h-full">
+      <body>
       <Navbar />
       <main>
         {children}
