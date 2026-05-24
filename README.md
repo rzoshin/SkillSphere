@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="/skillsphere-banner.png" alt="SkillSphere Banner" width="100%" />
+  <img src="https://raw.githubusercontent.com/rzoshin/SkillSphere/main/public/skillsphere-banner.png" width="100%" />
 </p>
 
 <h1 align="center">🎓 SkillSphere</h1>
